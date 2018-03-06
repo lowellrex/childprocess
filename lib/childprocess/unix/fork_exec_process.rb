@@ -4,6 +4,7 @@ module ChildProcess
       private
 
       def launch_process
+        puts "running ChildProcess::Unix::ForkExecProcess.launch_process()"
         if @io
           stdout = @io.stdout
           stderr = @io.stderr

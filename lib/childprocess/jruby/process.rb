@@ -69,6 +69,7 @@ module ChildProcess
       private
 
       def launch_process(&blk)
+        puts "running ChildProcess::JRuby::Process.launch_process()"
         pb = java.lang.ProcessBuilder.new(@args)
 
         pb.directory java.io.File.new(@cwd || Dir.pwd)

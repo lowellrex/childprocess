@@ -9,6 +9,7 @@ module ChildProcess
       @@cwd_lock = Mutex.new
 
       def launch_process
+        puts "running ChildProcess::Unix::PosixSpawnProcess.launch_process()"
         pid_ptr = FFI::MemoryPointer.new(:pid_t)
         actions = Lib::FileActions.new
         attrs   = Lib::Attrs.new
