@@ -34,6 +34,8 @@ module ChildProcess
         puts "arguments to exec:"
         p @args
 
+        puts "Can we fork this process? #{Process.respond_to?(:fork)}"
+
         puts "forking process"
         @pid = Kernel.fork {
           puts "setting process group to zero if leader"
