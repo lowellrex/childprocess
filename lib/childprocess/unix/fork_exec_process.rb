@@ -27,6 +27,13 @@ module ChildProcess
           puts "done calling ::IO.pipe"
         end
 
+        puts "before we fork let's examine some variables"
+        puts "is leader?: #{leader?}"
+        puts "@cwd:"
+        p @cwd
+        puts "arguments to exec:"
+        p @args
+
         puts "forking process"
         @pid = Kernel.fork {
           puts "setting process group to zero if leader"
